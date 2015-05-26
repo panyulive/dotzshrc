@@ -24,3 +24,5 @@ if [ -n "$TMUX" ]; then
   alias pbpaste="reattach-to-user-namespace pbpaste"
   alias launchctl="reattach-to-user-namespace launchctl"
 fi
+
+set_bg_image ~/Picture/BbFk_LPCMAASuyT.jpg

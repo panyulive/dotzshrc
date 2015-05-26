@@ -117,23 +117,6 @@ setopt hist_reduce_blanks
 setopt extended_glob
 
 ################################################
-# エイリアス
-
-alias la='ls -a'
-alias ll='ls -l'
-
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-
-alias mkdir='mkdir -p'
-
-# sudo の後のコマンドでエイリアスを有効にする
-alias sudo='sudo '
-
-# グローバルエイリアス
-alias -g L='| less'
-alias -g G='| grep'
 
 # C で標準出力をクリップボードにコピーする
 # mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
@@ -175,8 +158,22 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
+#背景画像表示
+set_bg_image() {
+  /usr/bin/osascript <<EOF
+  tell application "iTerm"
+    tell the current terminal
+      tell the current session
+        set background image path to "$1"
+      end tell
+    end tell
+  end tell
+EOF
+}
+
+#set_bg_image ~/Pictures/なべすたー.png
 # load .zshrc_*
-[ -f $ZDOTDIR/.zshrc_`uname`     ] && . $ZDOTDIR/.zshrc_`uname`
+[ -f $ZDOTDIR/.zshrc_Drawin     ] && . $ZDOTDIR/.zshrc_Drawin
 [ -f $ZDOTDIR/.zshrc_external    ] && . $ZDOTDIR/.zshrc_external
 [ -f $ZDOTDIR/.zshrc_alias       ] && . $ZDOTDIR/.zshrc_alias
 [ -f $ZDOTDIR/.zshrc_misc        ] && . $ZDOTDIR/.zshrc_misc
