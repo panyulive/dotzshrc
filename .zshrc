@@ -2,6 +2,10 @@
 # 少し凝った zshrc
 # License : MIT
 # http://mollifier.mit-license.org/
+#cowsay -f ghostbusters 進捗どうですか？
+
+
+
 
 #PATH設定
 #~/Dropbox/config/zshを読み込ませる
@@ -180,3 +184,16 @@ EOF
 [ -f $ZDOTDIR/.zshrc_local       ] && . $ZDOTDIR/.zshrc_local
 [ -f $ZDOTDIR/.zshrc_function    ] && . $ZDOTDIR/.zshrc_function
 # vim:set ft=zsh:
+
+
+#erutaso
+#function cdk(){
+#  if ${ENV} -eq 0 ;
+#  then
+#    erutaso
+#  else
+#    cd
+#  fi
+#  ENV=ENV+1
+# 
+#  }
